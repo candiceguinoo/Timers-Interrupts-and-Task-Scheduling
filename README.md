@@ -115,12 +115,7 @@ The ISR immediately sets the task flag, but the main loop cannot execute Task A 
 
 ### 3. Calculate the worst-case response time for Task A if all other tasks are running.
 
-```
-Worst-case Response Time
-= Maximum Latency + Task Execution Time
-= 70 ms + 50 ms
-= 120 ms
-```
+Worst-case TResponse is 120ms. It is calculated as the maximum latency (70ms to wait for Task A and B) plus Task A's own execution time (50ms).
 
 Therefore, the worst-case response time is **120 ms**.
 
