@@ -28,33 +28,11 @@ The system demonstrates the use of periodic timer interrupts, external interrupt
 
 - TIM2 configured as a **1 Hz periodic interrupt** (High Priority)
 - TIM3 configured as a **2 Hz periodic interrupt** (Medium Priority)
-- External interrupt triggered by user button press
-- Foreground/Background system architecture
-- Timing measurement and response analysis
-- Cyclic executive task scheduling
+- External interrupt on button press 
+- Foreground/background system architecture 
+- Timing measurement and analysis 
 
 ---
-
-## System Architecture
-
-### Interrupt Service Routines (ISR)
-
-| Interrupt | Function | Priority |
-|------------|------------|------------|
-| TIM2 | Triggers Task A every 1 second | High |
-| TIM3 | Triggers Task B every 0.5 seconds | Medium |
-| EXTI0 | Handles button press events | Low |
-
-### Tasks
-
-| Task | Description | Execution Time |
-|--------|-------------|---------------|
-| Task A | Triggered by TIM2 interrupt | 50 ms |
-| Task B | Triggered by TIM3 interrupt | 20 ms |
-| Button Task | Handles external interrupt events | Event-driven |
-
----
-
 ## Timing Measurements
 
 | Parameter | Definition | Measured Value |
@@ -66,20 +44,6 @@ The system demonstrates the use of periodic timer interrupts, external interrupt
 | TResponse(Task A) | Total response time | 50.02443 ms |
 
 ---
-
-## Timing Calculations
-
-### Response Time of Task A
-
-```
-TResponse(Task A)
-= TLatency + TTask
-= 24.43 µs + 50 ms
-≈ 50.02443 ms
-```
-
----
-
 ## Sequence Diagram
 
 > Insert the sequence diagram image from your laboratory report here.
